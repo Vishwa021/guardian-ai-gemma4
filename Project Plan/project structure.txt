@@ -1,0 +1,36 @@
+guardian-ai-gemma4/
+│
+├── app/
+│   ├── agents/
+│   │   ├── coordinator.py
+│   │   ├── vision_agent.py
+│   │   ├── text_agent.py
+│   │   ├── fraud_agent.py
+│   │   ├── risk_agent.py
+│   │   └── recommendation_agent.py
+│   │
+│   ├── core/
+│   │   ├── cerebras_client.py
+│   │   ├── prompts.py
+│   │   └── config.py
+│   │
+│   ├── services/
+│   │   ├── image_service.py
+│   │   ├── pdf_service.py
+│   │   └── ocr_service.py
+│   │
+│   ├── api/
+│   │   └── routes.py
+│   │
+│   └── main.py
+│
+├── frontend/
+│   └── app.py
+│
+├── tests/
+├── assets/
+├── docs/
+├── .env
+├── requirements.txt
+├── README.md
+└── PROJECT_PLAN.md

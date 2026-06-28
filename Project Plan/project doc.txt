@@ -88,6 +88,8 @@ A working AI assistant capable of receiving multimodal input and generating a co
 * Connected API
 * Clean project structure
 
+---> done 
+
 ---
 
 ## Stage 2 — Multi-Agent Architecture
