@@ -1,0 +1,48 @@
+IDEA
+│
+├── Problem Statement
+├── Goal
+├── Scope
+└── Expected Outcome
+
+PLAN
+│
+├── Stage 1
+│   ├── Step 1
+│   ├── Step 2
+│   └── Deliverable
+│
+├── Stage 2
+│   ├── Step 1
+│   ├── Step 2
+│   └── Deliverable
+│
+└── Stage N
+
+EXECUTE
+│
+├── Build
+├── Integrate
+└── Document
+
+TEST
+│
+├── Functional Testing
+├── Edge Cases
+├── Performance
+└── User Experience
+
+DEBUG / ERROR MANAGEMENT
+│
+├── Identify Error
+├── Why did it happen?
+├── Root Cause
+├── Possible Solutions
+├── Choose Best Solution
+├── Implement
+├── Test Again
+│
+├── Success ✅
+│
+└── Failure ❌
+    └── Repeat Analysis
