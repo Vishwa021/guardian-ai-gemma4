@@ -14,6 +14,8 @@ from app.models.request import AnalysisRequest
 from app.models.response import AgentResponse
 from app.utils.report_builder import ReportBuilder
 from app.models.final_report import FinalReport
+from app.utils.report_builder import ReportBuilder
+from app.services.pdf_service import PDFService
 
 
 class CoordinatorAgent:
@@ -74,6 +76,17 @@ class CoordinatorAgent:
 
         responses = []
 
+        # if request.pdf_path:
+
+        #     pdf_text = PDFService.extract_text(
+        #         request.pdf_path
+        #     )
+
+        #     if request.text:
+        #         request.text += "\n\n" + pdf_text
+        #     else:
+        #         request.text = pdf_text
+
         for agent in selected_agents:
 
             if agent == self.vision_agent:
@@ -132,6 +145,8 @@ class CoordinatorAgent:
         # Execute specialist agents
         responses = self.execute_agents(request)
 
+        summary = ReportBuilder.execution_summary(responses)
+
         # Overall risk
         risk = self.run_risk_assessment(responses)
 
@@ -140,7 +155,8 @@ class CoordinatorAgent:
 
         # Return complete report
         return FinalReport(
-            agent_reports=responses,
-            risk_assessment=risk,
-            recommendations=recommendations
-        )
+    agent_reports=responses,
+    risk_assessment=risk,
+    recommendations=recommendations,
+    execution_summary=summary
+)

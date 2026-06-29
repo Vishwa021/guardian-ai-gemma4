@@ -9,3 +9,5 @@ class AnalysisRequest(BaseModel):
     image_path: str | None = None
 
     text: str | None = None
+
+    pdf_path: str | None = None
