@@ -1,11 +1,11 @@
 from pydantic import BaseModel
 
 
-class UserRequest(BaseModel):
+class AnalysisRequest(BaseModel):
     """
-    Represents a request sent by the frontend.
+    Represents a user request to Guardian AI.
     """
 
-    user_input: str
     image_path: str | None = None
-    pdf_path: str | None = None
+
+    text: str | None = None

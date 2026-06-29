@@ -7,8 +7,21 @@ class AgentResponse(BaseModel):
     """
 
     agent_name: str
-    status: str          # SUCCESS / FAILED
+
+    status: str
+
     summary: str
-    confidence: float
-    threat_detected: bool
-    reasoning: str
+
+    confidence: float = 0.0
+
+    threat_detected: bool = False
+
+    reasoning: str = ""
+
+    input_tokens: int
+
+    output_tokens: int
+
+    total_tokens: int
+
+    response_time: float
