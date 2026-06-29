@@ -7,12 +7,12 @@ def render_dashboard():
 
     st.header("Analysis Results")
 
-    render_metrics(
-        risk="82%",
-        agents=5,
-        tokens=2841,
-        time_taken="4.3 s"
-    )
+    # render_metrics(
+    #     risk="82%",
+    #     agents=5,
+    #     tokens=2841,
+    #     time_taken="4.3 s"
+    # )
 
     st.divider()
 
